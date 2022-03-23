@@ -1,5 +1,8 @@
 package ohtu.verkkokauppa;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Kauppa {
 
     private VarastoIO varasto;
@@ -9,9 +12,9 @@ public class Kauppa {
     private String kaupanTili;
 
     public Kauppa(VarastoIO varasto, PankkiIO pankki, ViitegeneraattoriIO viitegeneraattori) {
-        this.varasto = Varasto.getInstance();
-        this.pankki = Pankki.getInstance();
-        this.viitegeneraattori = Viitegeneraattori.getInstance();
+        this.varasto = varasto;
+        this.pankki = pankki;
+        this.viitegeneraattori = viitegeneraattori;
         kaupanTili = "33333-44455";
     }
 
