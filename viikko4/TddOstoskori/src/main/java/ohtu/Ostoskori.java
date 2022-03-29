@@ -6,6 +6,7 @@ import java.util.List;
 public class Ostoskori {
     private List<Ostos> ostokset;
     private int tavarat;
+    private int hinta;
     
     public Ostoskori() {
         this.ostokset = new ArrayList<>();
@@ -24,12 +25,13 @@ public class Ostoskori {
     public int hinta() {
         // kertoo korissa olevien tuotteiden yhteenlasketun hinnan
  
-        return 0;
+        return hinta;
     }
  
     public void lisaaTuote(Tuote lisattava) {
         ostokset.add(new Ostos(lisattava));
         tavarat++;
+        hinta += lisattava.getHinta();
         // lisää tuotteen
     }
  
