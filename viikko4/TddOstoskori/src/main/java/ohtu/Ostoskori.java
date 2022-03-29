@@ -29,6 +29,14 @@ public class Ostoskori {
     }
  
     public void lisaaTuote(Tuote lisattava) {
+        for (int i = 0; i < ostokset.size(); i++) {
+            if (ostokset.get(i).tuotteenNimi() == lisattava.getNimi()) {
+                ostokset.get(i).muutaLukumaaraa(1);
+                tavarat++;
+                hinta += lisattava.getHinta();
+                return;
+            }
+        }
         ostokset.add(new Ostos(lisattava));
         tavarat++;
         hinta += lisattava.getHinta();
