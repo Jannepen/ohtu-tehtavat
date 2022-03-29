@@ -15,6 +15,17 @@ public class OstoskoriTest {
         kori = new Ostoskori();
     }
     
+    // step 13
+    @Test
+    public void josKorissaKaksiSamaaTuotettaJaToinenPoistetaanOstoksessaTuotettaYksiKappale() {
+        Tuote maito = new Tuote("maito", 3);
+        kori.lisaaTuote(maito);
+        kori.lisaaTuote(maito);
+        kori.poista(maito);
+        
+        assertEquals(1, kori.ostokset().get(0).lukumaara());
+    }
+    
     // step 12
     @Test
     public void kahdenSamanTuotteenLisaamisenJalkeenOstoskorissaOstosJollaTuotteenNimiJaLkmKaksi() {
