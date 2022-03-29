@@ -13,6 +13,7 @@ public class Ostoskori {
     }
  
     public int tavaroitaKorissa() {
+        
         // kertoo korissa olevien tavaroiden lukumäärän
         // eli jos koriin lisätty 2 kpl tuotetta "maito", 
         //   tulee metodin palauttaa 2 
