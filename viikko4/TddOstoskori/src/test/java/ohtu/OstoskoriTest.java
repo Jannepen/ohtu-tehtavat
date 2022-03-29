@@ -14,6 +14,15 @@ public class OstoskoriTest {
         kori = new Ostoskori();
     }
     
+    // step 7
+    @Test
+    public void kahdenSamanTuotteenLisaamisenJalkeenOstoskorinHintaKaksiKertaaTuote() {
+        Tuote maito = new Tuote("maito", 3);
+        kori.lisaaTuote(maito);
+        kori.lisaaTuote(maito);
+        assertEquals(6, kori.hinta());
+    }
+    
     // step 6
     @Test
     public void kahdenSamanTuotteenLisaamisenJalkeenOstoskorissaKaksiTavaraa() {
