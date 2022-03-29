@@ -63,6 +63,7 @@ public class Ostoskori {
     }
  
     public void tyhjenna() {
+        ostokset.removeAll(ostokset);
         // tyhjentää korin
     }
 }

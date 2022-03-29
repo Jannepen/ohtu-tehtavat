@@ -15,6 +15,18 @@ public class OstoskoriTest {
         kori = new Ostoskori();
     }
     
+    // step 15
+    @Test
+    public void metodiTyhjennaTyhjentaaKorin() {
+        Tuote maito = new Tuote("maito", 3);
+        Tuote leipa = new Tuote("leipa", 4);
+        kori.lisaaTuote(maito);
+        kori.lisaaTuote(leipa);
+        kori.tyhjenna();
+        
+        assertEquals(0, kori.ostokset().size());
+    }
+    
     // step 14
     @Test
     public void josKoriinOnLisattyTuoteJaSePoistetaanOnKoriTyhja() {
